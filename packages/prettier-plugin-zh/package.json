@@ -1,0 +1,42 @@
+{
+  "name": "prettier-plugin-zh",
+  "version": "0.0.0",
+  "description": "Prettier plugin for formatting Zh(Chinese) text.",
+  "keywords": [
+    "prettier",
+    "prettier-plugin",
+    "chinese"
+  ],
+  "homepage": "",
+  "repository": "https://github.com/nnecec/zh",
+  "license": "MIT",
+  "author": "nnecec <nnecec@gmail.com>",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@nnecec/tsconfig": "^0.1.6",
+    "prettier": "^3.0.0",
+    "core": "workspace:*",
+    "tsup": "^7.1.0"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

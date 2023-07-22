@@ -1,0 +1,38 @@
+{
+  "name": "core",
+  "version": "0.0.0",
+  "private": true,
+  "description": "ESLint plugin for formatting Zh(Chinese) text.",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "chinese"
+  ],
+  "homepage": "",
+  "repository": "https://github.com/nnecec/zh",
+  "license": "MIT",
+  "author": "nnecec <nnecec@gmail.com>",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@nnecec/tsconfig": "^0.1.6",
+    "tsup": "^7.1.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
