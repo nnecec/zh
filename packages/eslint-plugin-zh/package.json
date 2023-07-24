@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-zh",
   "version": "0.0.0",
-  "private": "true",
+  "private": true,
   "description": "ESLint plugin for formatting Zh(Chinese) text.",
   "keywords": [
     "eslint",
