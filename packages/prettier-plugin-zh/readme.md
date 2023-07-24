@@ -4,18 +4,21 @@
 
 ## Features
 
-- add spaces between Chinese and English characters.
+- spaceAroundAlphabet: add spaces between Chinese and English characters.
+- spaceAroundNumber: add spaces between Chinese and Number characters.
 - In the future, more formatting options for Chinese text will be added.
 
 ## Installation
 
-You can install **prettier-plugin-zh** using npm or yarn:
+You can install **prettier-plugin-zh** using npm, yarn or pnpm:
 
 ```bash
 # npm
 npm install prettier prettier-plugin-zh --save-dev
+# yarn
+yarn add prettier prettier-plugin-zh --dev
 # pnpm
-pnpm add prettier prettier-plugin-zh --dev
+pnpm add prettier prettier-plugin-zh --save-dev
 ```
 
 ## Usage
@@ -34,15 +37,22 @@ pnpm add prettier prettier-plugin-zh --dev
 ```json
 {
   "plugins": ["prettier-plugin-zh"],
-  "spaceAroundAlphabet": true
+  "spaceAroundAlphabet": true,
+  "spaceAroundNumber": true
 }
 ```
 
-### `spaceAroundAlphabet` (default: `true`)
+### `spaceAroundAlphabet`
 
 - **Type:** `boolean`
 - **Default:** `true`
 - **Description:** When set to `true`, this option will enable the insertion of spaces between Chinese and English characters. If set to `false`, this feature will be disabled.
+
+### `spaceAroundNumber`
+
+- **Type:** `boolean`
+- **Default:** `true`
+- **Description:** When set to `true`, this option will enable the insertion of spaces between Chinese and Number characters. If set to `false`, this feature will be disabled.
 
 ## Contributing
 

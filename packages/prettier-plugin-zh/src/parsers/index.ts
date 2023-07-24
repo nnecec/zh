@@ -4,18 +4,19 @@ import { defaultTransform, transformMarkdown } from '../transforms'
 
 import { getBasePlugins } from './base-parser'
 
-import type {ParserFormat } from './base-parser';
+import type { Transform } from '../transforms/types'
+import type { ParserFormat } from './base-parser'
 
 const base = getBasePlugins()
 
-export function createParser(parserFormat: ParserFormat, transform = defaultTransform): Parser {
+export function createParser(parserFormat: ParserFormat, transform: Transform = defaultTransform): Parser {
   return {
     ...base.parsers[parserFormat],
     async parse(text, options) {
       const original = base.parsers[parserFormat]
       const ast = await original.parse(text, options)
 
-      transform(ast)
+      transform(ast, options)
 
       return ast
     },
