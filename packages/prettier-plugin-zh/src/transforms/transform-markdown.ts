@@ -1,6 +1,8 @@
-import { AST } from 'prettier'
-import { traverseChildren } from '../utils'
 import { spaceAroundAlphabet } from 'core'
+
+import type { AST } from 'prettier'
+
+import { traverseChildren } from '../utils'
 
 export function transformMarkdown(ast: AST) {
   traverseChildren(ast, child => {

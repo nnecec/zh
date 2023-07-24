@@ -1,5 +1,5 @@
 export const isNumberCharacter = (value: string) => {
-  return /^[0-9]$/.test(value)
+  return /^\d$/.test(value)
 }
 
 export const isChineseCharacter = (value: string) => {
@@ -7,5 +7,5 @@ export const isChineseCharacter = (value: string) => {
 }
 
 export const isEnglishCharacter = (value: string) => {
-  return /^[a-zA-Z]$/.test(value)
+  return /^[A-Za-z]$/.test(value)
 }

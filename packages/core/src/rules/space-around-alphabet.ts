@@ -14,12 +14,12 @@ export function spaceAroundAlphabet(text: string) {
   if (boundaries.length > 0) {
     let lastMatchPos = 0
 
-    let newContent = boundaries.reduce((content, boundary) => {
-      console.log(content)
-      const str = `${content}${text.slice(lastMatchPos, boundary + 1)} `
+    let newContent = ''
+
+    for (const boundary of boundaries) {
       lastMatchPos = boundary + 1
-      return str
-    }, '')
+      newContent += text.slice(lastMatchPos, boundary + 1)
+    }
 
     newContent += text.slice(lastMatchPos)
     return newContent

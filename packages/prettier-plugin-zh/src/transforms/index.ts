@@ -1,4 +1,4 @@
-import { AST } from 'prettier'
+import type { AST } from 'prettier'
 
 export * from './transform-markdown'
 

@@ -1,4 +1,4 @@
-import { AST } from 'prettier'
+import type { AST } from 'prettier'
 
 export function traverseChildren(ast: AST, fn: (child: AST) => void) {
   if (!ast.children) return

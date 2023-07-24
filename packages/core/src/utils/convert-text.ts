@@ -6,7 +6,7 @@ import { isChineseCharacter, isEnglishCharacter, isNumberCharacter } from './hel
  * 你好世界 hello world!!! -> ZZZZAAAAA-AAAAA---
  */
 export const convertText = (text: string) => {
-  const res = text.split('').map(value => {
+  const res = [...text].map(value => {
     if (isNumberCharacter(value)) {
       return 'N'
     } else if (isChineseCharacter(value)) {
