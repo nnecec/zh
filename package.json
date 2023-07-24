@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "bump": "changeset version",
     "changeset": "changeset",
+    "ci:publish": "pnpm publish -r",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",

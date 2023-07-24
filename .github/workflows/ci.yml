@@ -1,9 +1,9 @@
-name: Node CI
+name: CI Test
 
 on: [pull_request]
 
 jobs:
-  build:
+  test:
     timeout-minutes: 20
 
     runs-on: ubuntu-latest
@@ -17,8 +17,13 @@ jobs:
         with:
           node-version: 16.x
 
+      - name: Use pnpm 8
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Install Dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Test
-        run: yarn test
+        run: pnpm test
