@@ -1,1 +1,1 @@
-export * from './space-around-alphabet'
+export * from './space-around'

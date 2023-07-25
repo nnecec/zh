@@ -3,7 +3,7 @@ import { isChineseCharacter, isEnglishCharacter, isNumberCharacter } from './hel
 /**
  * https://github.com/lint-md/lint-md/blob/master/src/utils/mark-text.ts
  *
- * 你好世界 hello world!!! -> ZZZZAAAAA-AAAAA---
+ * 你好世界 hello world!!!1234 -> ZZZZAAAAA-AAAAA---NNNN
  */
 export const convertText = (text: string) => {
   const res = [...text].map(value => {

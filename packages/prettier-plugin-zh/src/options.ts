@@ -9,4 +9,10 @@ export const options: Record<keyof ZhOptions, SupportOption> = {
     description: 'Provide space around alphabet.',
     type: 'boolean',
   },
+  spaceAroundNumber: {
+    category: 'Global',
+    default: true,
+    description: 'Provide space around number.',
+    type: 'boolean',
+  },
 }

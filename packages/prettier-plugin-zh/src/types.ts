@@ -1,3 +1,4 @@
 export interface ZhOptions {
-  spaceAroundAlphabet: boolean
+  spaceAroundAlphabet?: boolean
+  spaceAroundNumber?: boolean
 }

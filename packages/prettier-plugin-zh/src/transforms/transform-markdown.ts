@@ -1,13 +1,14 @@
-import { spaceAroundAlphabet } from 'core'
-
-import type { AST } from 'prettier'
+import { spaceAroundAlphabet, spaceAroundNumber } from 'core'
 
 import { traverseChildren } from '../utils'
 
-export function transformMarkdown(ast: AST) {
+import type { Transform } from './types'
+
+export const transformMarkdown: Transform = (ast, options) => {
   traverseChildren(ast, child => {
     if (child.type === 'text') {
-      child.value = spaceAroundAlphabet(child.value)
+      if (options.spaceAroundAlphabet) child.value = spaceAroundAlphabet(child.value)
+      if (options.spaceAroundNumber) child.value = spaceAroundNumber(child.value)
     }
   })
 }

@@ -1,5 +1,2 @@
-import type { AST } from 'prettier'
-
+export * from './default-transform'
 export * from './transform-markdown'
-
-export const defaultTransform = (ast: AST): AST => ast
