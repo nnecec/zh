@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "website",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "next": "^13.4.12",
+    "nextra": "^2.10.0",
+    "nextra-theme-docs": "^2.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
