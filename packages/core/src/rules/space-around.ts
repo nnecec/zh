@@ -2,7 +2,7 @@ import { convertText } from '../utils'
 
 function spaceAround(text: string, reg: RegExp) {
   const convertedText = convertText(text)
-  console.log(text, convertText)
+
   const boundaries: number[] = []
 
   const close = convertedText.matchAll(reg)
