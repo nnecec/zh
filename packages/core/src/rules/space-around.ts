@@ -2,7 +2,7 @@ import { convertText } from '../utils'
 
 function spaceAround(text: string, reg: RegExp) {
   const convertedText = convertText(text)
-  console.log(text, convertText)
+
   const boundaries: number[] = []
 
   const close = convertedText.matchAll(reg)
@@ -32,4 +32,8 @@ export function spaceAroundAlphabet(text: string) {
 }
 export function spaceAroundNumber(text: string) {
   return spaceAround(text, /NZ|ZN/g)
+}
+
+export function spaceAroundLink() {
+  // TODO: implement
 }

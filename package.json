@@ -3,15 +3,12 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "bump": "changeset version",
     "changeset": "changeset",
-    "ci:publish": "pnpm publish -r",
     "dev": "turbo run dev",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
-    "prerelease": "pnpm clean && pnpm install && pnpm build",
-    "release": "pnpm run prerelease && changeset publish",
-    "test": "turbo run test"
+    "release": "changeset publish",
+    "test": "turbo run test",
+    "version": "changeset version"
   },
   "dependencies": {
     "@changesets/cli": "^2.26.2"
