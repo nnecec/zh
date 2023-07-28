@@ -2,12 +2,11 @@ export function Logo({ size = 81 }) {
   return (
     <div className="inline-flex items-center">
       <svg
-        id="svg-comp"
-        width={size}
-        height={size}
-        viewBox="0 0 500 500"
         fill="none"
+        height={size}
         preserveAspectRatio="none"
+        viewBox="0 0 500 500"
+        width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
