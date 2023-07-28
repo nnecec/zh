@@ -1,4 +1,4 @@
-import { noSpaceBetweenNumberUnit, spaceAroundAlphabet, spaceAroundNumber } from 'core'
+import { noDuplicatePunctuation, noSpaceBetweenNumberUnit, spaceAroundAlphabet, spaceAroundNumber } from 'core'
 
 import { traverseChildren } from '../utils'
 
@@ -11,6 +11,9 @@ export const transformMarkdown: Transform = (ast, options) => {
       if (options.spaceAroundNumber) child.value = spaceAroundNumber(child.value)
       if (options.noSpaceBetweenNumberUnit && options.noSpaceBetweenNumberUnit.length > 0) {
         child.value = noSpaceBetweenNumberUnit(child.value, options.noSpaceBetweenNumberUnit)
+      }
+      if (options.noDuplicatePunctuation) {
+        child.value = noDuplicatePunctuation(child.value)
       }
     }
   })
