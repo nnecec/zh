@@ -1,5 +1,9 @@
 # zh
 
+<p align="center">
+  <img src="./apps/website/public/zh.svg" width="120" height="120" />
+</p>
+
 zh is a repository for creating plugins for modern formatting tools like ESLint and Prettier. These plugins are mainly used to format Chinese text to follow these modern Chinese documentation conventions.
 
 - [中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide)

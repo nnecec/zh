@@ -1,0 +1,14 @@
+<svg id="svg-comp" width="100" height="100" viewBox="0 0 500 500" fill="none"
+  preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="transition"
+  style="border-radius: 0%; transform: scale(1) rotate(0deg);">
+  <defs>
+    <mask id="globeOuterOnly">
+      <path
+        d="M362.5 400H203.137C146.13 399.954 99.9536 353.492 100 296.226V137.406M137.5 100.001L296.863 100C353.87 100.047 400.046 146.509 400 203.775V362.596"
+        stroke="#000" stroke-width="40"></path>
+    </mask>
+  </defs>
+  <path
+    d="M362.5 400H203.137C146.13 399.954 99.9536 353.492 100 296.226V137.406M137.5 100.001L296.863 100C353.87 100.047 400.046 146.509 400 203.775V362.596"
+    stroke="#000" stroke-width="40"></path>
+</svg>

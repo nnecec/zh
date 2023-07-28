@@ -1,0 +1,69 @@
+# prettier-plugin-zh
+
+**prettier-plugin-zh** is a Prettier plugin of **Zh**.
+
+> only support .md now.
+
+## Installation
+
+You can install **prettier-plugin-zh** using npm, yarn or pnpm:
+
+```bash npm2yarn
+npm i -D prettier prettier-plugin-zh
+```
+
+## Usage
+
+1. Create a [prettier config file](https://prettier.io/docs/en/configuration.html) in the root of
+   your project.
+2. Add the following configuration to enable the plugin:
+
+```json
+{
+  "plugins": ["prettier-plugin-zh"]
+}
+```
+
+## Configuration
+
+Here is a example:
+
+```json
+{
+  "plugins": ["prettier-plugin-zh"],
+  "spaceAroundAlphabet": true,
+  "spaceAroundNumber": true,
+  "noSpaceBetweenNumberUnit": ["%", "°C", "°"]
+}
+```
+
+### `spaceAroundAlphabet`
+
+- **Type:** `boolean`
+- **Default:** `true`
+- **Description:** When set to `true`, this option will enable the insertion of spaces between
+  Chinese and English characters. If set to `false`, this feature will be disabled.
+
+### `spaceAroundNumber`
+
+- **Type:** `boolean`
+- **Default:** `true`
+- **Description:** When set to `true`, this option will enable the insertion of spaces between
+  Chinese and Number characters. If set to `false`, this feature will be disabled.
+
+### `noSpaceBetweenNumberUnit`
+
+- **Type:** `string[]`
+- **Default:** `[]`
+- **Description:** The option allows configuring which unit symbols will have spaces removed between
+  the unit and a number. This can be used to control spacing for things like currency symbols,
+  percent signs, temperature units, etc. The option accepts an array of strings, where each string
+  is a unit symbol to apply the behavior to, for example: `['%', '°']`.
+
+## Acknowledgements
+
+We would like to express our gratitude to the Prettier team for their amazing work in developing
+such a powerful code formatting tool.
+
+Thank you for using **prettier-plugin-zh**! If you have any questions or encounter any problems,
+please don't hesitate to reach out to us through the issue tracker on GitHub. Happy formatting!

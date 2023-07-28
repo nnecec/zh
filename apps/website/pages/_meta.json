@@ -1,0 +1,21 @@
+{
+  "-- Guide": {
+    "type": "separator",
+    "title": "Guide"
+  },
+  "index": "Introduction",
+  "-- Plugins": {
+    "type": "separator",
+    "title": "Plugins"
+  },
+  "prettier-plugin-zh": "prettier-plugin-zh",
+  "-- More": {
+    "type": "separator",
+    "title": "More"
+  },
+  "github_link": {
+    "title": "Github ↗",
+    "href": "https://github.com/nnecec/zh",
+    "newWindow": true
+  }
+}
