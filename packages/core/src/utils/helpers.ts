@@ -10,12 +10,8 @@ export const isEnglishCharacter = (value: string) => {
   return /^[A-Za-z]$/.test(value)
 }
 
-export const isFullwidth = (value: string) => {
-  // eslint-disable-next-line unicorn/better-regex
-  return /[，。；：？！（）“”‘’《》【】{}〔〕「」·—…¥]/g.test(value)
-}
+export const FULLWIDTH_PUNCTUATION = '，、。；：？！（）“”‘’《》【】{}〔〕「」｜…～'
+export const FULLWIDTH_REGEX = new RegExp(`[${FULLWIDTH_PUNCTUATION}]`, 'g')
 
-export const isHalfwidth = (value: string) => {
-  // eslint-disable-next-line unicorn/better-regex, no-useless-escape
-  return /[,。;:?!\[\]\(\){}【】「」·—...¥]/g.test(value)
-}
+export const HALFWIDTH_PUNCTUATION = '!"\'(),.:;<>?\\[\\]`|~'
+export const HALFWIDTH_REGEXP = new RegExp(`[${HALFWIDTH_PUNCTUATION}]`, 'g')

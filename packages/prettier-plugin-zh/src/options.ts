@@ -9,6 +9,12 @@ export const options: Record<keyof ZhOptions, SupportOption> = {
     description: 'Clear duplicate punctuation.',
     type: 'boolean',
   },
+  noSpaceAroundFullwidth: {
+    category: 'Global',
+    default: true,
+    description: 'Clear space around fullwidth.',
+    type: 'boolean',
+  },
   noSpaceBetweenNumberUnit: {
     array: true,
     category: 'Global',
