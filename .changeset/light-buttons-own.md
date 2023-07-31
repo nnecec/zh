@@ -2,4 +2,4 @@
 'prettier-plugin-zh': minor
 ---
 
-support space around number
+support no-space-around-fullwidth

@@ -3,6 +3,18 @@ import type { SupportOption } from 'prettier'
 import type { ZhOptions } from './types'
 
 export const options: Record<keyof ZhOptions, SupportOption> = {
+  noDuplicatePunctuation: {
+    category: 'Global',
+    default: false,
+    description: 'Clear duplicate punctuation.',
+    type: 'boolean',
+  },
+  noSpaceAroundFullwidth: {
+    category: 'Global',
+    default: true,
+    description: 'Clear space around fullwidth.',
+    type: 'boolean',
+  },
   noSpaceBetweenNumberUnit: {
     array: true,
     category: 'Global',

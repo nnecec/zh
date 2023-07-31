@@ -1,0 +1,47 @@
+# no-duplicate-punctuation
+
+✅ This rule is recommended.
+
+🔧 This rule is automatically fixable.
+
+## 📖 Rule Details
+
+remove repetitive duplicate punctuation.
+
+```md
+// ✅ Correct
+德國隊竟然戰勝了巴西隊！
+
+她竟然對你說「喵」？！
+
+// ❌ Incorrect
+德國隊竟然戰勝了巴西隊！！
+
+德國隊竟然戰勝了巴西隊！！！！！！！！
+
+她竟然對你說「喵」？？！！
+
+她竟然對你說「喵」？！？！？？！！
+
+// 🔧 Fixed
+德國隊竟然戰勝了巴西隊！
+
+德國隊竟然戰勝了巴西隊！
+
+她竟然對你說「喵」？！
+
+她竟然對你說「喵」？！？！？！
+```
+
+## ⚙️ Usage
+
+```json
+{
+  "noDuplicatePunctuation": true
+}
+```
+
+- **Type:** `string[]`
+- **Default:** `[]`
+- **Description:** You have to set an array of strings, where each string is a unit symbol to apply
+  the behavior to, for example: `['%', '°']`.

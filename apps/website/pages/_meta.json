@@ -4,11 +4,16 @@
     "title": "Guide"
   },
   "index": "Introduction",
-  "-- Plugins": {
-    "type": "separator",
-    "title": "Plugins"
-  },
   "prettier-plugin-zh": "prettier-plugin-zh",
+  "-- Rules": {
+    "type": "separator",
+    "title": "Rules"
+  },
+  "space-around-alphabet": "space-around-alphabet",
+  "space-around-number": "space-around-number",
+  "no-space-between-number-unit": "no-space-between-number-unit",
+  "no-space-around-fullwidth": "no-space-around-fullwidth",
+  "no-duplicate-punctuation": "no-duplicate-punctuation",
   "-- More": {
     "type": "separator",
     "title": "More"
