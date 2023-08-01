@@ -1,5 +1,12 @@
 # prettier-plugin-zh
 
+## 0.3.0
+
+### Minor Changes
+
+- dc6f3e2: support no-space-around-fullwidth
+- 15066f8: support no space between number and unit
+
 ## 0.2.0
 
 ### Minor Changes
