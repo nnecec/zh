@@ -39,8 +39,8 @@ const config: DocsThemeConfig = {
         <meta content="#fff" name="theme-color" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="en" httpEquiv="Content-Language" />
-        <meta content="Format standard of Chinese." name="description" />
-        <meta content="Format standard of Chinese." name="og:description" />
+        <meta content="Formatting Chinese with ease." name="description" />
+        <meta content="Formatting Chinese with ease." name="og:description" />
         <meta content={title ? title + ' – Zh' : 'Zh'} name="og:title" />
         <meta content="Zh" name="apple-mobile-web-app-title" />
         <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
