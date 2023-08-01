@@ -15,14 +15,16 @@ export const transformMarkdown: Transform = (ast, options) => {
     if (child.type === 'text') {
       if (options.spaceAroundAlphabet === true) child.value = spaceAroundAlphabet(child.value)
       if (options.spaceAroundNumber === true) child.value = spaceAroundNumber(child.value)
+
+      if (options.noDuplicatePunctuation === true) {
+        child.value = noDuplicatePunctuation(child.value)
+      }
+
       if (options.noSpaceBetweenNumberUnit && options.noSpaceBetweenNumberUnit.length > 0) {
         child.value = noSpaceBetweenNumberUnit(child.value, options.noSpaceBetweenNumberUnit)
       }
-      if (options.noSpaceAroundFullwidth) {
+      if (options.noSpaceAroundFullwidth === true) {
         child.value = noSpaceAroundFullwidth(child.value)
-      }
-      if (options.noDuplicatePunctuation === true) {
-        child.value = noDuplicatePunctuation(child.value)
       }
     }
   })

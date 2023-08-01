@@ -12,7 +12,7 @@ export function Logo({ size = 81 }) {
         <path
           d="M362.5 400H203.137C146.13 399.954 99.9536 353.492 100 296.226V137.406M137.5 100.001L296.863 100C353.87 100.047 400.046 146.509 400 203.775V362.596"
           stroke="currentColor"
-          stroke-width="40"
+          strokeWidth="40"
         ></path>
       </svg>
 
