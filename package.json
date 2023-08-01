@@ -17,7 +17,7 @@
     "@nnecec/eslint-config": "^0.5.1",
     "@nnecec/prettier-config": "^0.3.0",
     "@turbo/gen": "^1.10.12",
-    "eslint": "^8.45.0",
+    "eslint": "^8.46.0",
     "prettier": "^3.0.0",
     "prettier-plugin-zh": "workspace:*",
     "turbo": "^1.10.12"
