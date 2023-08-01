@@ -1,5 +1,11 @@
 # prettier-plugin-zh
 
+## 0.3.1
+
+### Patch Changes
+
+- 1b23836: fix function orders in transformMarkdown
+
 ## 0.3.0
 
 ### Minor Changes
