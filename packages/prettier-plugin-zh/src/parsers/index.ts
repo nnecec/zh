@@ -25,5 +25,4 @@ export function createParser(parserFormat: ParserFormat, transform: Transform = 
 
 export const parsers: Plugin['parsers'] = {
   markdown: createParser('markdown', transformMarkdown),
-  mdx: createParser('mdx'),
 }
