@@ -1,5 +1,6 @@
-import type { AST, ParserOptions } from 'prettier'
+import type { ParserOptions } from 'prettier'
 
-import type { ZhOptions } from '../types'
+import type { AST, ZhOptions } from '../types'
 
-export type Transform = (text: AST, options: ParserOptions & ZhOptions) => void
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type Transform<T extends AST = any> = (ast: T, options: ParserOptions & ZhOptions) => void

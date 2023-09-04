@@ -33,7 +33,3 @@ export function spaceAroundAlphabet(text: string) {
 export function spaceAroundNumber(text: string) {
   return spaceAround(text, /NZ|ZN/g)
 }
-
-export function spaceAroundLink() {
-  // TODO: implement
-}

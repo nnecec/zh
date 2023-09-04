@@ -28,6 +28,18 @@ export const options: Record<keyof ZhOptions, SupportOption> = {
     description: 'Provide space around alphabet.',
     type: 'boolean',
   },
+  spaceAroundCode: {
+    category: 'Global',
+    default: false,
+    description: 'Provide space around code.',
+    type: 'boolean',
+  },
+  spaceAroundLink: {
+    category: 'Global',
+    default: false,
+    description: 'Provide space around link.',
+    type: 'boolean',
+  },
   spaceAroundNumber: {
     category: 'Global',
     default: true,

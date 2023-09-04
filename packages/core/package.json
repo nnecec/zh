@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@nnecec/tsconfig": "^0.1.6",
-    "tsup": "^7.1.0"
+    "tsup": "^7.2.0"
   },
   "publishConfig": {
     "access": "restricted"

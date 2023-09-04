@@ -30,9 +30,9 @@
   },
   "devDependencies": {
     "@nnecec/tsconfig": "^0.1.6",
-    "prettier": "^3.0.0",
     "core": "workspace:*",
-    "tsup": "^7.1.0"
+    "prettier": "^3.0.3",
+    "tsup": "^7.2.0"
   },
   "peerDependencies": {
     "prettier": ">=3.0.0"
