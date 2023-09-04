@@ -1,5 +1,11 @@
 # prettier-plugin-zh
 
+## 0.4.0
+
+### Minor Changes
+
+- fb20be9: support spaceAroundCode, spaceAroundLink
+
 ## 0.3.1
 
 ### Patch Changes
