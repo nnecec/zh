@@ -73,10 +73,7 @@ const config: DocsThemeConfig = {
     )
   },
   logo: <Logo size={36} />,
-  primaryHue: {
-    dark: 350,
-    light: 340,
-  },
+  primaryHue: 35,
   project: {
     link: 'https://github.com/nnecec/zh',
   },

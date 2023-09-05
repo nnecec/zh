@@ -8,4 +8,5 @@ module.exports = {
   noDuplicatePunctuation: true,
   noSpaceBetweenNumberUnit: defaultUnits,
   plugins: ['prettier-plugin-zh'],
+  spaceAroundLink: true,
 }
