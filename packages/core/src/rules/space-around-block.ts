@@ -1,5 +1,5 @@
 function spaceAroundBlock(prevText?: string, nextText?: string) {
-  return [prevText && `${prevText} `, nextText && ` ${nextText}`] as [typeof prevText, typeof nextText]
+  return [prevText && `${prevText} `, nextText && ` ${nextText}`] as const
 }
 
 export const spaceAroundCode: typeof spaceAroundBlock = (prevText, nextText) => {

@@ -30,8 +30,8 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "devDependencies": {
-    "@nnecec/tsconfig": "^0.1.6",
-    "tsup": "^7.2.0"
+    "@nnecec/tsconfig": "^0.2.1",
+    "tsup": "^8.0.1"
   },
   "publishConfig": {
     "access": "restricted"

@@ -29,10 +29,10 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "devDependencies": {
-    "@nnecec/tsconfig": "^0.1.6",
+    "@nnecec/tsconfig": "^0.2.1",
     "core": "workspace:*",
-    "prettier": "^3.0.3",
-    "tsup": "^7.2.0"
+    "prettier": "^3.1.0",
+    "tsup": "^8.0.1"
   },
   "peerDependencies": {
     "prettier": ">=3.0.0"
