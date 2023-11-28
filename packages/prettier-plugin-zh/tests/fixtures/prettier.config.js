@@ -9,4 +9,5 @@ module.exports = {
   noSpaceBetweenNumberUnit: defaultUnits,
   plugins: ['prettier-plugin-zh'],
   spaceAroundLink: true,
+  spaceAroundCode: true,
 }

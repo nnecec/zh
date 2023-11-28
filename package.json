@@ -14,13 +14,13 @@
     "@changesets/cli": "^2.26.2"
   },
   "devDependencies": {
-    "@nnecec/eslint-config": "^0.6.2",
-    "@nnecec/prettier-config": "^0.3.1",
-    "@turbo/gen": "^1.10.13",
-    "eslint": "^8.47.0",
-    "prettier": "^3.0.2",
+    "@nnecec/eslint-config": "^0.7.5",
+    "@nnecec/prettier-config": "^0.3.2",
+    "@turbo/gen": "^1.10.16",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
     "prettier-plugin-zh": "workspace:*",
-    "turbo": "^1.10.13"
+    "turbo": "^1.10.16"
   },
   "packageManager": "pnpm@8.6.0"
 }
