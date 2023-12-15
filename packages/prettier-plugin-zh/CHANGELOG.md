@@ -1,5 +1,11 @@
 # prettier-plugin-zh
 
+## 0.5.1
+
+### Patch Changes
+
+- d49e4b4: lint autofix
+
 ## 0.5.0
 
 ### Minor Changes

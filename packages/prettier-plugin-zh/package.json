@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-zh",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Prettier plugin for formatting Zh(Chinese) text.",
   "keywords": [
     "prettier",
