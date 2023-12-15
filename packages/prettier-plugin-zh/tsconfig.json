@@ -1,6 +1,3 @@
 {
-  "extends": ["@nnecec/tsconfig"],
-  "compilerOptions": {
-    "noImplicitAny": false
-  }
+  "extends": "../../tsconfig.json"
 }

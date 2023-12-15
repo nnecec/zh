@@ -1,13 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { defaultUnits } = require('../..')
+const { defaultUnits } = require('../../dist')
 /**
- * @type {import('prettier').Config&import('../..').ZhOptions}
+ * @type {import('prettier').Config&import('../../dist').ZhOptions}
  */
 module.exports = {
   ...require('@nnecec/prettier-config'),
   noDuplicatePunctuation: true,
   noSpaceBetweenNumberUnit: defaultUnits,
   plugins: ['prettier-plugin-zh'],
-  spaceAroundLink: true,
   spaceAroundCode: true,
+  spaceAroundLink: true,
 }
