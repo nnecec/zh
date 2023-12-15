@@ -24,14 +24,15 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
+  "dependencies": {
+    "prettier": "^3.1.1"
+  },
   "devDependencies": {
-    "@nnecec/tsconfig": "^0.2.1",
     "core": "workspace:*",
-    "prettier": "^3.1.0",
     "tsup": "^8.0.1"
   },
   "peerDependencies": {

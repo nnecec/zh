@@ -8,10 +8,10 @@ import {
   spaceAroundNumber,
 } from 'core'
 
-import { traverseChildren } from '../utils'
-
 import type { MarkdownAST } from '../types'
 import type { Transform } from './types'
+
+import { traverseChildren } from '../utils'
 
 export const transformMarkdown: Transform<MarkdownAST> = (ast, options) => {
   traverseChildren<MarkdownAST>(ast, ({ child, nextSibling, prevSibling }) => {
@@ -35,16 +35,16 @@ export const transformMarkdown: Transform<MarkdownAST> = (ast, options) => {
       case 'inlineCode': {
         if (options.spaceAroundCode) {
           const [prevSiblingValue, nextSiblingValue] = spaceAroundCode(prevSibling?.value, nextSibling?.value)
-          if (prevSibling) prevSibling.value = prevSiblingValue!
-          if (nextSibling) nextSibling.value = nextSiblingValue!
+          if (prevSibling && prevSiblingValue) prevSibling.value = prevSiblingValue
+          if (nextSibling && nextSiblingValue) nextSibling.value = nextSiblingValue
         }
         break
       }
       case 'link': {
         if (options.spaceAroundLink) {
           const [prevSiblingValue, nextSiblingValue] = spaceAroundLink(prevSibling?.value, nextSibling?.value)
-          if (prevSibling) prevSibling.value = prevSiblingValue!
-          if (nextSibling) nextSibling.value = nextSiblingValue!
+          if (prevSibling && prevSiblingValue) prevSibling.value = prevSiblingValue
+          if (nextSibling && nextSiblingValue) nextSibling.value = nextSiblingValue
         }
         break
       }

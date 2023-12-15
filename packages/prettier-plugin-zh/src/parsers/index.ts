@@ -1,11 +1,10 @@
 import type { Parser, Plugin } from 'prettier'
 
-import { defaultTransform, transformMarkdown } from '../transforms'
-
-import { getBasePlugins } from './base-parser'
-
 import type { Transform } from '../transforms/types'
 import type { ParserFormat } from './base-parser'
+
+import { defaultTransform, transformMarkdown } from '../transforms'
+import { getBasePlugins } from './base-parser'
 
 const base = getBasePlugins()
 

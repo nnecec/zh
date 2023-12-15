@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/default
 import nextra from 'nextra'
 
 const withNextra = nextra({

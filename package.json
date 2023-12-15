@@ -1,6 +1,7 @@
 {
   "name": "zh",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "turbo run build",
     "changeset": "changeset",
@@ -11,17 +12,18 @@
     "version": "changeset version"
   },
   "dependencies": {
-    "@changesets/cli": "^2.26.2"
+    "@changesets/cli": "^2.27.1"
   },
   "devDependencies": {
-    "@nnecec/eslint-config": "^0.7.5",
-    "@nnecec/prettier-config": "^0.3.2",
-    "@turbo/gen": "^1.10.16",
     "@next/eslint-plugin-next": "~13.4.7",
-    "eslint": "^8.54.0",
-    "prettier": "^3.1.0",
+    "@nnecec/eslint-config": "^0.8.6",
+    "@nnecec/prettier-config": "^0.3.3",
+    "@nnecec/tsconfig": "^0.2.2",
+    "@turbo/gen": "^1.11.2",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.1",
     "prettier-plugin-zh": "workspace:*",
-    "turbo": "^1.10.16"
+    "turbo": "^1.11.2"
   },
   "packageManager": "pnpm@8.6.0"
 }

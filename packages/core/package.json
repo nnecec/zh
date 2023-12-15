@@ -2,7 +2,7 @@
   "name": "core",
   "version": "0.1.0",
   "private": true,
-  "description": "ESLint plugin for formatting Zh(Chinese) text.",
+  "description": "Formatting Chinese text.",
   "keywords": [
     "eslint",
     "eslint-plugin",
@@ -25,12 +25,12 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "devDependencies": {
-    "@nnecec/tsconfig": "^0.2.1",
+    "@nnecec/tsconfig": "^0.2.2",
     "tsup": "^8.0.1"
   },
   "publishConfig": {

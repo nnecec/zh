@@ -1,6 +1,5 @@
 import { parsers as markdownParsers } from 'prettier/plugins/markdown'
 
-
 export function getBasePlugins() {
   return {
     parsers: {

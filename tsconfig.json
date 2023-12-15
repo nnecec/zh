@@ -1,0 +1,9 @@
+{
+  "extends": "@nnecec/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "core": ["packages/core/src"]
+    }
+  }
+}
