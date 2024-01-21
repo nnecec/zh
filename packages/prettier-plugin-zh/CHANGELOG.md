@@ -1,5 +1,11 @@
 # prettier-plugin-zh
 
+## 0.5.2
+
+### Patch Changes
+
+- fc51568: update deps
+
 ## 0.5.1
 
 ### Patch Changes
