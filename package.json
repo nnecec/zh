@@ -12,17 +12,18 @@
     "version": "changeset version"
   },
   "dependencies": {
-    "@changesets/cli": "^2.27.1"
+    "@changesets/cli": "^2.27.7"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "~13.4.7",
-    "@nnecec/eslint-config": "^0.9.4",
-    "@nnecec/prettier-config": "^0.4.1",
+    "@nnecec/eslint-config": "^0.10.0",
+    "@nnecec/prettier-config": "^0.4.2",
     "@nnecec/tsconfig": "^0.2.3",
-    "@turbo/gen": "^1.13.2",
-    "eslint": "^8.56.0",
-    "prettier": "^3.2.5",
+    "@turbo/gen": "^2.0.6",
+    "eslint": "^9.6.0",
+    "prettier": "^3.3.2",
     "prettier-plugin-zh": "workspace:*",
-    "turbo": "^1.13.2"
-  }
+    "turbo": "^2.0.6"
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
 }

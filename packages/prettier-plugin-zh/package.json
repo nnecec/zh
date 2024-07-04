@@ -28,10 +28,10 @@
     "dev": "bunchee -w"
   },
   "dependencies": {
-    "prettier": "^3.2.5"
+    "prettier": "^3.3.2"
   },
   "devDependencies": {
-    "bunchee": "^5.1.2",
+    "bunchee": "^5.2.2",
     "core": "workspace:*"
   },
   "peerDependencies": {

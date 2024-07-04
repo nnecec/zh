@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@nnecec/tsconfig": "^0.2.3",
-    "bunchee": "^5.1.2"
+    "bunchee": "^5.2.2"
   },
   "publishConfig": {
     "access": "restricted"

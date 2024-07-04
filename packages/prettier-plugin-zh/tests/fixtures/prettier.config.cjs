@@ -1,6 +1,6 @@
-const { defaultUnits } = require('../../dist')
+const { defaultUnits } = require('../..')
 /**
- * @type {import('prettier').Config&import('../../dist').ZhOptions}
+ * @type {import('prettier').Config&import('../..').ZhOptions}
  */
 module.exports = {
   ...require('@nnecec/prettier-config'),
