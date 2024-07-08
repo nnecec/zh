@@ -1,5 +1,15 @@
 # prettier-plugin-zh
 
+## 0.6.0
+
+### Minor Changes
+
+- dfadab4: use bunchee for bundle
+
+### Patch Changes
+
+- dfadab4: compose fns of parser
+
 ## 0.5.2
 
 ### Patch Changes
