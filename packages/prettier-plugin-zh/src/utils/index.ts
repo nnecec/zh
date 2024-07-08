@@ -22,3 +22,15 @@ export function traverseChildren<T extends WithChildren>(ast: T, fn: (context: T
     traverseChildren(child, fn)
   }
 }
+
+export function compose(...fns: ((...args: any[]) => any)[]) {
+  if (fns.length === 0) {
+    return (arg: any) => arg
+  }
+  if (fns.length === 1) {
+    return fns[0]!
+  }
+  return fns.reduce((a, b) => {
+    return (...args) => a(b(...args))
+  })
+}

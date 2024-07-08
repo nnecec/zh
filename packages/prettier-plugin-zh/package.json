@@ -13,30 +13,29 @@
   "author": "nnecec <nnecec@gmail.com>",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    },
-    "./package.json": "./package.json"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "files": [
     "./dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "bunchee",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "dev": "bunchee -w"
   },
   "dependencies": {
-    "prettier": "^3.2.4"
+    "prettier": "^3.3.2"
   },
   "devDependencies": {
-    "core": "workspace:*",
-    "tsup": "^8.0.1"
+    "bunchee": "^5.2.2",
+    "core": "workspace:*"
   },
   "peerDependencies": {
-    "prettier": ">=3.0.0"
+    "prettier": ">=3"
   },
   "publishConfig": {
     "access": "public"
