@@ -6,8 +6,7 @@ export function noDuplicatePunctuation(text: string) {
   const textArr = [...text]
 
   for (const [i, char] of textArr.entries()) {
-    // eslint-disable-next-line unicorn/prefer-regexp-test
-    if (char.match(FULLWIDTH_REGEX)) {
+    if (FULLWIDTH_REGEX.test(char)) {
       if (prev === char) {
         boundaries.push(i)
       } else {

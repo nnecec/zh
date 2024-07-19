@@ -7,6 +7,14 @@ export default [
     typescript: true,
   }),
   {
+    rules: {
+      'unicorn/prefer-module': 'off',
+    },
+  },
+  {
+    ignores: ['**/dist/**', '**/node_modules/**', '**/.turbo/**'],
+  },
+  {
     plugins: {
       '@next/next': pluginNext,
     },

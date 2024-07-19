@@ -1,4 +1,4 @@
-const { defaultUnits } = require('../../dist')
+const { defaultUnits } = require('../../dist/index.cjs')
 /**
  * @type {import('prettier').Config&import('../../dist').ZhOptions}
  */
