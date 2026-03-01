@@ -46,4 +46,9 @@ export const options: Record<keyof ZhOptions, SupportOption> = {
     description: 'Provide space around number.',
     type: 'boolean',
   },
+  zhIgnorePatterns: {
+    category: 'Global',
+    description: 'Ignore patterns (JSON string or comma-separated).',
+    type: 'string',
+  },
 }

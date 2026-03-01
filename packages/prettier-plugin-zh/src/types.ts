@@ -8,6 +8,7 @@ export interface ZhOptions {
   spaceAroundCode?: boolean
   spaceAroundLink?: boolean
   spaceAroundNumber?: boolean
+  zhIgnorePatterns?: (string | RegExp)[]
 }
 
 export type MarkdownAST = {
