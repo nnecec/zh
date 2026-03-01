@@ -6,9 +6,8 @@
 
 1. **新增规则实现**：
    - `strict-fullwidth-and-halfwidth`: 完善全角/半角转换规则（标点、数字）
-   - `proper-noun-capitalization`: 专有名词大小写校验（如 GitHub、Microsoft）
-   - `no-improper-abbreviation`: 缩写规范检测（如 h5、FED 等不规范缩写）
-   - `straight-quote-replacement`: 直角引号替换（"" → "", '' → ''）
+     - **半角转全角策略**：在中文语境下（CJK 字符附近），将半角标点转换为全角
+     - **数字全角/半角转换**：中文语境中使用全角数字，英文语境保留半角
 
 2. **测试体系建设**：
    - 为 core 包引入 Vitest 测试框架
@@ -19,9 +18,6 @@
 
 ### New Capabilities
 - `fullwidth-halfwidth-conversion`: 全角/半角字符转换规则
-- `proper-noun-capitalization`: 专有名词大小写校验规则
-- `no-improper-abbreviation`: 不规范缩写检测规则
-- `straight-quote-replacement`: 直角引号替换规则
 - `core-unit-tests`: 使用 Vitest 的核心包单元测试
 
 ### Modified Capabilities
