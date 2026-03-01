@@ -52,13 +52,37 @@ cd apps/website && pnpm dev
 
 ### Packages
 
-- **`packages/core`**: Core formatting logic and rules for Chinese text. Exports transformation rules used by both ESLint and Prettier plugins. Built with bunchee.
+- **`packages/core`**: Core formatting logic and rules for Chinese text. Exports transformation rules that can be used by any formatting tool (Prettier, ESLint, etc.). Built with bunchee.
 
 - **`packages/prettier-plugin-zh`**: Prettier plugin that formats Chinese text. Depends on `core` package. Built with bunchee.
 
-- **`packages/eslint-plugin-zh`**: ESLint plugin (JavaScript-based, early stage). Contains rules for Chinese text formatting.
+- **`packages/eslint-plugin-zh`**: ESLint plugin (JavaScript-based, early stage). Depends on `core` package for formatting rules.
 
 - **`apps/website`**: Documentation website built with Next.js 13 and Nextra. Uses Tailwind CSS.
+
+### Architecture Design Principles
+
+The project follows a **plugin-based architecture** where:
+
+1. **Core package** contains all formatting rules and transform logic
+   - All transformation rules (e.g., `no-duplicate-punctuation`, spacing rules)
+   - Core transformation utilities
+   - Parser utilities for different content types
+   - Helper functions
+
+2. **Plugin packages** serve as adapters to connect core with specific tools
+   - **`prettier-plugin-zh`**: Adapts core rules to Prettier's plugin API
+   - **`eslint-plugin-zh`**: Adapts core rules to ESLint's rule API
+
+This design ensures:
+- **Rule Reusability**: Same rules work across different tools
+- **Maintainability**: Rule changes only need to be made in one place
+- **Extensibility**: Adding support for new tools (e.g., IDE extensions, other formatters) only requires creating a new adapter plugin
+
+Example data flow:
+```
+New Tool → Adapter Plugin → Core Rules → Transforms → Formatted Output
+```
 
 ### Data Flow
 
