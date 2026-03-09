@@ -25,14 +25,14 @@
   "scripts": {
     "build": "bunchee",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "dev": "bunchee -w"
-  },
-  "dependencies": {
-    "prettier": "^3.3.2"
+    "dev": "bunchee -w",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "devDependencies": {
-    "bunchee": "^5.2.2",
-    "core": "workspace:*"
+    "bunchee": "^6.9.4",
+    "core": "workspace:*",
+    "vitest": "^4.0.18"
   },
   "peerDependencies": {
     "prettier": ">=3"

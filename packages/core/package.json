@@ -25,11 +25,14 @@
   "scripts": {
     "build": "bunchee",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "dev": "bunchee -w"
+    "dev": "bunchee -w",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "devDependencies": {
     "@nnecec/tsconfig": "^0.2.3",
-    "bunchee": "^5.2.2"
+    "bunchee": "^6.9.4",
+    "vitest": "^4.0.18"
   },
   "publishConfig": {
     "access": "restricted"

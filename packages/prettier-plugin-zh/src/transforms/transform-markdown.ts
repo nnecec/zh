@@ -2,27 +2,33 @@ import {
   noDuplicatePunctuation,
   noSpaceAroundFullwidth,
   noSpaceBetweenNumberUnit,
+  parseIgnorePatterns,
   spaceAroundAlphabet,
+  spaceAroundAlphabet as spaceAroundAlphabetFn,
   spaceAroundCode,
   spaceAroundLink,
   spaceAroundNumber,
+  spaceAroundNumber as spaceAroundNumberFn,
 } from 'core'
 
-import type { MarkdownAST } from '../types'
+import type { MarkdownAST, ZhOptions } from '../types'
 import type { Transform } from './types'
 
 import { compose, traverseChildren } from '../utils'
 
 export const transformMarkdown: Transform<MarkdownAST> = (ast, options) => {
+  const zhOptions = options as ZhOptions
+  const ignorePatterns = parseIgnorePatterns(zhOptions.zhIgnorePatterns as string | undefined)
+
   traverseChildren<MarkdownAST>(ast, ({ child, nextSibling, prevSibling }) => {
     switch (child.type) {
       case 'text': {
         const fns = [
-          options.spaceAroundAlphabet === true && spaceAroundAlphabet,
-          options.spaceAroundNumber === true && spaceAroundNumber,
-          options.noDuplicatePunctuation === true && noDuplicatePunctuation,
-          options.noSpaceBetweenNumberUnit && options.noSpaceBetweenNumberUnit.length > 0 && noSpaceBetweenNumberUnit,
-          options.noSpaceAroundFullwidth === true && noSpaceAroundFullwidth,
+          options.spaceAroundAlphabet === true && ((text: string) => spaceAroundAlphabetFn(text, ignorePatterns)),
+          options.spaceAroundNumber === true && ((text: string) => spaceAroundNumberFn(text, ignorePatterns)),
+          options.noDuplicatePunctuation === true && ((text: string) => noDuplicatePunctuation(text, ignorePatterns)),
+          options.noSpaceBetweenNumberUnit && options.noSpaceBetweenNumberUnit.length > 0 && ((text: string, units?: string[]) => noSpaceBetweenNumberUnit(text, units, ignorePatterns)),
+          options.noSpaceAroundFullwidth === true && ((text: string) => noSpaceAroundFullwidth(text, ignorePatterns)),
         ].filter(fn => !!fn)
         child.value = compose(...fns)(child.value, options.noSpaceBetweenNumberUnit)
         break

@@ -1,6 +1,12 @@
 import { FULLWIDTH_REGEX } from '../utils/helpers'
+import { IgnorePattern, isIgnored } from '../utils/ignore-patterns'
 
-export function noDuplicatePunctuation(text: string) {
+export function noDuplicatePunctuation(text: string, ignorePatterns: IgnorePattern[] = []) {
+  // If text matches ignorePatterns, skip processing
+  if (ignorePatterns.length > 0 && isIgnored(text, ignorePatterns)) {
+    return text
+  }
+
   let prev: null | string = null
   const boundaries: number[] = []
   const textArr = [...text]
