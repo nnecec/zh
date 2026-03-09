@@ -1,5 +1,11 @@
 # prettier-plugin-zh
 
+## 0.7.0
+
+### Minor Changes
+
+- 571074e: Refactor Prettier integration
+
 ## 0.6.0
 
 ### Minor Changes
