@@ -2,6 +2,7 @@ import {
   noDuplicatePunctuation,
   noSpaceAroundFullwidth,
   noSpaceBetweenNumberUnit,
+  parseIgnorePatterns,
   spaceAroundAlphabet,
   spaceAroundAlphabet as spaceAroundAlphabetFn,
   spaceAroundCode,
@@ -15,46 +16,6 @@ import type { Transform } from './types'
 
 import { compose, traverseChildren } from '../utils'
 
-// Parse ignore patterns from options
-// Support formats:
-// - JSON string: '["天若OCR", "r:ChatGPT"]'
-// - Comma-separated: "天若OCR,r:ChatGPT"
-function parseIgnorePatterns(patternsInput: string | undefined): (string | RegExp)[] {
-  if (!patternsInput) return []
-  try {
-    // Try JSON format first
-    if (patternsInput.startsWith('[')) {
-      const parsed = JSON.parse(patternsInput)
-      if (Array.isArray(parsed)) {
-        return parsed.map((p: string) => {
-          if (typeof p === 'string' && p.startsWith('r:')) {
-            try {
-              return new RegExp(p.slice(2))
-            } catch {
-              return p.slice(2)
-            }
-          }
-          return p
-        })
-      }
-    }
-  } catch {
-    // Fall through to comma-separated
-  }
-  // Comma-separated format
-  return patternsInput.split(',').map(p => {
-    const trimmed = p.trim()
-    if (trimmed.startsWith('r:')) {
-      try {
-        return new RegExp(trimmed.slice(2))
-      } catch {
-        return trimmed.slice(2)
-      }
-    }
-    return trimmed
-  })
-}
-
 export const transformMarkdown: Transform<MarkdownAST> = (ast, options) => {
   const zhOptions = options as ZhOptions
   const ignorePatterns = parseIgnorePatterns(zhOptions.zhIgnorePatterns as string | undefined)
@@ -65,9 +26,9 @@ export const transformMarkdown: Transform<MarkdownAST> = (ast, options) => {
         const fns = [
           options.spaceAroundAlphabet === true && ((text: string) => spaceAroundAlphabetFn(text, ignorePatterns)),
           options.spaceAroundNumber === true && ((text: string) => spaceAroundNumberFn(text, ignorePatterns)),
-          options.noDuplicatePunctuation === true && noDuplicatePunctuation,
-          options.noSpaceBetweenNumberUnit && options.noSpaceBetweenNumberUnit.length > 0 && noSpaceBetweenNumberUnit,
-          options.noSpaceAroundFullwidth === true && noSpaceAroundFullwidth,
+          options.noDuplicatePunctuation === true && ((text: string) => noDuplicatePunctuation(text, ignorePatterns)),
+          options.noSpaceBetweenNumberUnit && options.noSpaceBetweenNumberUnit.length > 0 && ((text: string, units?: string[]) => noSpaceBetweenNumberUnit(text, units, ignorePatterns)),
+          options.noSpaceAroundFullwidth === true && ((text: string) => noSpaceAroundFullwidth(text, ignorePatterns)),
         ].filter(fn => !!fn)
         child.value = compose(...fns)(child.value, options.noSpaceBetweenNumberUnit)
         break

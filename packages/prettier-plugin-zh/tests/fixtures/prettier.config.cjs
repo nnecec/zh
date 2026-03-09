@@ -9,4 +9,5 @@ module.exports = {
   plugins: ['prettier-plugin-zh'],
   spaceAroundCode: true,
   spaceAroundLink: true,
+  zhIgnorePatterns: '["天若OCR","r:ChatGPT"]',
 }

@@ -1,6 +1,5 @@
-import { convertText } from '../utils'
-
-export type IgnorePattern = string | RegExp
+import { convertText } from '../utils/convert-text'
+import { IgnorePattern, isIgnored } from '../utils/ignore-patterns'
 
 function isWithinIgnoredPattern(text: string, index: number, patterns: IgnorePattern[]): boolean {
   for (const pattern of patterns) {
@@ -25,6 +24,11 @@ function isWithinIgnoredPattern(text: string, index: number, patterns: IgnorePat
 }
 
 function spaceAround(text: string, reg: RegExp, ignorePatterns: IgnorePattern[] = []) {
+  // If text fully matches ignorePatterns, skip processing
+  if (ignorePatterns.length > 0 && isIgnored(text, ignorePatterns)) {
+    return text
+  }
+
   const convertedText = convertText(text)
 
   const boundaries: number[] = []
