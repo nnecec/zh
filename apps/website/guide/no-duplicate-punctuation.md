@@ -1,10 +1,14 @@
 # no-duplicate-punctuation
 
-✅ This rule is recommended.
+::: tip Recommended
+This rule is recommended.
+:::
 
-🔧 This rule is automatically fixable.
+::: info Auto-fix
+This rule is automatically fixable.
+:::
 
-## 📖 Rule Details
+## Rule Details
 
 remove repetitive duplicate punctuation.
 
@@ -17,11 +21,11 @@ remove repetitive duplicate punctuation.
 // ❌ Incorrect
 德國隊竟然戰勝了巴西隊！！
 
-德國隊竟然戰勝了巴西隊！！！！！！！！
+德國隊竟然戰勝了巴西隊！！！！！！
 
-她竟然對你說「喵」？？！！
+她竟然對你說「喵」？？？！
 
-她竟然對你說「喵」？！？！？？！！
+她竟然對你說「喵」？！？！？？？！
 
 // 🔧 Fixed
 德國隊竟然戰勝了巴西隊！
@@ -33,7 +37,7 @@ remove repetitive duplicate punctuation.
 她竟然對你說「喵」？！？！？！
 ```
 
-## ⚙️ Usage
+## Usage
 
 ```json
 {
@@ -41,7 +45,6 @@ remove repetitive duplicate punctuation.
 }
 ```
 
-- **Type:** `string[]`
-- **Default:** `[]`
-- **Description:** You have to set an array of strings, where each string is a unit symbol to apply
-  the behavior to, for example: `['%', '°']`.
+- **Type:** `boolean`
+- **Default:** `false`
+- **Description:** When set to `true`, this option will remove duplicate punctuation marks.

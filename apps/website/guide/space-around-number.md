@@ -1,10 +1,14 @@
 # space-around-number
 
-✅ This rule is recommended.
+::: tip Recommended
+This rule is recommended.
+:::
 
-🔧 This rule is automatically fixable.
+::: info Auto-fix
+This rule is automatically fixable.
+:::
 
-## 📖 Rule Details
+## Rule Details
 
 Place one space before/after numbers
 
@@ -23,7 +27,7 @@ Place one space before/after numbers
 今天出去買菜花了 5000 元。
 ```
 
-## ⚙️ Usage
+## Usage
 
 ```json
 {

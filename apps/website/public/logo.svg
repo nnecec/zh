@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="zhGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f48c06"/>
+      <stop offset="100%" stop-color="#e85d04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Stylized 中 character frame -->
+  <rect x="20" y="15" width="60" height="70" rx="6" fill="none" stroke="url(#zhGrad)" stroke-width="5"/>
+
+  <!-- Middle horizontal line -->
+  <line x1="28" y1="50" x2="72" y2="50" stroke="url(#zhGrad)" stroke-width="5"/>
+
+  <!-- Vertical center stroke -->
+  <line x1="50" y1="25" x2="50" y2="75" stroke="url(#zhGrad)" stroke-width="5"/>
+</svg>

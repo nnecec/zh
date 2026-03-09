@@ -15,7 +15,6 @@
     "@changesets/cli": "^2.29.8"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "~13.4.7",
     "@nnecec/eslint-config": "^0.13.0",
     "@nnecec/prettier-config": "^0.5.1",
     "@nnecec/tsconfig": "^0.2.3",

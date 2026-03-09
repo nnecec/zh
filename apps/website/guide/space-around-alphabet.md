@@ -1,10 +1,14 @@
 # space-around-alphabet
 
-✅ This rule is recommended.
+::: tip Recommended
+This rule is recommended.
+:::
 
-🔧 This rule is automatically fixable.
+::: info Auto-fix
+This rule is automatically fixable.
+:::
 
-## 📖 Rule Details
+## Rule Details
 
 Place one space before/after English words
 
@@ -23,7 +27,7 @@ Place one space before/after English words
 在 LeanCloud 上，數據儲存是圍繞 AVObject 進行的。
 ```
 
-## ⚙️ Usage
+## Usage
 
 ```json
 {

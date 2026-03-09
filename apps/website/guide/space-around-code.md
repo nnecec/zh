@@ -1,10 +1,14 @@
 # space-around-code
 
-🛠️ This rule require configuration.
+::: tip Config Required
+This rule requires configuration.
+:::
 
-🔧 This rule is automatically fixable.
+::: info Auto-fix
+This rule is automatically fixable.
+:::
 
-## 📖 Rule Details
+## Rule Details
 
 Place one space before/after inline code block.
 
@@ -22,7 +26,7 @@ Place one space before/after inline code block.
 今天使用了 `Vite` 来打包应用
 ```
 
-## ⚙️ Usage
+## Usage
 
 ```json
 {

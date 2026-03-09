@@ -1,10 +1,14 @@
 # space-around-link
 
-🛠️ This rule require configuration.
+::: tip Config Required
+This rule requires configuration.
+:::
 
-🔧 This rule is automatically fixable.
+::: info Auto-fix
+This rule is automatically fixable.
+:::
 
-## 📖 Rule Details
+## Rule Details
 
 Place one space before/after inline link block.
 
@@ -25,7 +29,7 @@ Place one space before/after inline link block.
 各种工具和不同框架的模板。
 ```
 
-## ⚙️ Usage
+## Usage
 
 ```json
 {

@@ -1,10 +1,14 @@
 # no-space-between-number-unit
 
-🛠️ This rule require configuration.
+::: tip Config Required
+This rule requires configuration.
+:::
 
-🔧 This rule is automatically fixable.
+::: info Auto-fix
+This rule is automatically fixable.
+:::
 
-## 📖 Rule Details
+## Rule Details
 
 The option allows configuring which unit symbols will have spaces removed between the unit and a
 number. This can be used to control spacing for things like currency symbols, percent signs,
@@ -32,7 +36,7 @@ temperature units, etc.
 新 MacBook Pro 有 15% 的 CPU 性能提升。
 ```
 
-## ⚙️ Usage
+## Usage
 
 ```json
 {

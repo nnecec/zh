@@ -1,10 +1,14 @@
 # no-space-around-fullwidth
 
-✅ This rule is recommended.
+::: tip Recommended
+This rule is recommended.
+:::
 
-🔧 This rule is automatically fixable.
+::: info Auto-fix
+This rule is automatically fixable.
+:::
 
-## 📖 Rule Details
+## Rule Details
 
 The `noSpaceAroundFullwidth` configuration option is a Boolean value that determines whether spaces
 around fullwidth characters should be removed.
@@ -28,7 +32,7 @@ more compact.
 剛剛買了一部 iPhone，好開心！
 ```
 
-## ⚙️ Usage
+## Usage
 
 ```json
 {
