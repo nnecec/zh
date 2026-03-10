@@ -50,7 +50,7 @@ export default defineConfig({
     // Social links
     socialLinks: [
       { icon: 'github', link: 'https://github.com/nnecec/zh' },
-      { icon: 'twitter', link: 'https://x.com/nnecec_cn' },
+      { icon: 'x', link: 'https://x.com/nnecec_cn' },
     ],
 
     // Footer
@@ -64,11 +64,14 @@ export default defineConfig({
 
     // Edit link
     editLink: {
-      pattern: 'https://github.com/nnecec/zh/edit/main/apps/website2/:path',
+      pattern: 'https://github.com/nnecec/zh/edit/main/apps/website/:path',
       text: 'Edit this page on GitHub',
     },
 
     // Last updated timestamp
-    lastUpdated: true,
+    lastUpdated: {
+      text: 'Last updated at',
+      formatOptions: { dateStyle: 'full', timeStyle: 'medium' },
+    },
   },
 })
